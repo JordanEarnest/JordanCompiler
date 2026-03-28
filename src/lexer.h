@@ -1,7 +1,6 @@
 #pragma once
 
 #include "token.h"
-#include "log.h"
 #include "error.h"
 #include <regex>
 #include <vector>

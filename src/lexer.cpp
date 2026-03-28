@@ -173,9 +173,9 @@ std::vector<Token> Lexer::tokenize() {
 }
 
 void Lexer::printTokens() const {
-    for (int i = 0; i < tokens.size(); i++) {
-        Log::info("Token " + std::to_string(i) + ": " + tokens[i].toString());
-    }
+    // for (int i = 0; i < tokens.size(); i++) {
+    //     Log::info("Token " + std::to_string(i) + ": " + tokens[i].toString());
+    // }
 }
 
 void Lexer::handleErrors() {

@@ -1,6 +1,5 @@
 #include <iostream>
 
-#include "log.h"
 #include "lexer.h"
 #include "compiler.h"
 #include "source.h"
@@ -15,10 +14,6 @@ int main(int argc, char* argv[]) {
     std::string filePath = argv[1];
     std::ifstream sourceFile(filePath);
 
-    if (!sourceFile)
-        Log::error(filePath, "file does not exist");
-
-
     // read entire file and put in string
     std::stringstream buffer;
 
@@ -26,7 +21,6 @@ int main(int argc, char* argv[]) {
     std::vector<std::string> lines;
     // extract all lines from source code
     while (std::getline(sourceFile, line)) {
-        std::cout << "hello!";
         lines.push_back(line);
         buffer << line << '\n'; // new line is excluded with getline 
     }
