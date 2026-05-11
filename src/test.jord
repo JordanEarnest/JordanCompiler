@@ -6,4 +6,4 @@ float z = `3.0;
         `
 // this is a comment
 
-if int x = 3; // test this is a comment
+if int |x = 3; // test this is a comment

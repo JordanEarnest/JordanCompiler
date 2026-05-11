@@ -1,5 +1,6 @@
 #include "lexer.h"
 #include "error.h"
+#include <iostream>
 
 Lexer::Lexer(const Source& source) : source(source) {}
 
@@ -173,9 +174,9 @@ std::vector<Token> Lexer::tokenize() {
 }
 
 void Lexer::printTokens() const {
-    // for (int i = 0; i < tokens.size(); i++) {
-    //     Log::info("Token " + std::to_string(i) + ": " + tokens[i].toString());
-    // }
+    for (int i = 0; i < tokens.size(); i++) {
+        std::cout << "Token " + std::to_string(i) + ": " + tokens[i].toString() << std::endl;
+    }
 }
 
 void Lexer::handleErrors() {
